@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Launch Pad New Tab",
+  "version": "1.0",
+  "description": "Replace new tab page with launch pad",
+  "chrome_url_overrides": {
+    "newtab": "launchpad.html"
+  },
+  "permissions": []
+}

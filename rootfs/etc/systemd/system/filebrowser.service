@@ -1,0 +1,15 @@
+[Unit]
+Description=File Browser
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+ExecStart=/usr/local/bin/filebrowser -a 0.0.0.0 -p 8080 -r /home/ubuntu -d /home/ubuntu/.filebrowser/filebrowser.db
+WorkingDirectory=/home/ubuntu
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

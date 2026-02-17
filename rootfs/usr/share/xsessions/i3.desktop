@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=i3
+Comment=i3 window manager
+Exec=/usr/bin/i3
+Type=Application

@@ -1,0 +1,35 @@
+# i3 config file (v4)
+# i3 "kiosk-like" config
+#
+# Objectif:
+# - Lancer automatiquement Chrome (via kiosk-start.sh)
+# - Éviter les décorations / barre i3
+# - Forcer Chrome en plein écran
+#
+# Note: on laisse volontairement très peu (voire pas) de raccourcis i3 pour
+# limiter les "échappatoires" côté WM.
+
+focus_follows_mouse no
+
+# Clavier AZERTY (sécurité supplémentaire si Xorg ne l'applique pas)
+exec_always --no-startup-id setxkbmap -model pc105 -layout fr
+
+default_border none
+default_floating_border none
+
+# Pas de barre i3 (kiosk)
+bar {
+    mode invisible
+}
+
+# Lancer Chrome (et le relancer si besoin)
+exec_always --no-startup-id ~/.config/i3/kiosk-start.sh
+
+# Forcer Chrome en plein écran
+for_window [class="Google-chrome"] fullscreen enable
+for_window [class="google-chrome"] fullscreen enable
+for_window [class="Google-chrome-stable"] fullscreen enable
+
+# Confort: rendre les popups Chrome flottants (certains dialogues)
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable

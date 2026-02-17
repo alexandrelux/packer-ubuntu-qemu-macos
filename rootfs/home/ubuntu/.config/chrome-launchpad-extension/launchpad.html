@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Launch Pad</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        text-align: center;
+        max-width: 800px;
+        width: 100%;
+      }
+
+      h1 {
+        color: white;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .apps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .app-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        text-decoration: none;
+        color: #333;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .app-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      .app-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .app-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .app-description {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      .google {
+        color: #4285f4;
+      }
+      .filebrowser {
+        color: #34a853;
+      }
+      .cockpit {
+        color: #ea4335;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome</h1>
+      <div class="apps-grid">
+        <a href="https://www.google.com" target="_blank" class="app-card">
+          <div class="app-title">Google</div>
+          <div class="app-description">Search the web</div>
+        </a>
+
+        <a href="http://localhost:8080" target="_blank" class="app-card">
+          <div class="app-title">File Browser</div>
+          <div class="app-description">Browse files</div>
+        </a>
+
+        <a href="http://localhost:9090" target="_blank" class="app-card">
+          <div class="app-title">Settings</div>
+          <div class="app-description">System management</div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
